@@ -1,38 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+*  {
+  font: 400 16px 'Poppins', normal;
+  line-height: 24px;
+}
+
+#root {
+  min-width: 375px;
+  max-width: 2000px;
+}
+
+:root {
+  box-sizing: border-box;
+  /* App's component colors */
+  --app-baground-color: #f5f5f5;
+  /* Search's component colors */
+  --promo-banner-color: rgba(4, 191, 148, 0.16);
+  --colored-heding-color: #04BF94;
+  /* Articles' component colors */
+  --date-color: #ADB8C8;
+  --text-color: #78787A;
+  --devider-color: #C4C4C4;
+  /* Footer's component colors */
+  --footer-color: #91A0B6;
+}
+
+/* MOBILE */
+.search-img-desk, .temperature-desk, .menu-account-icon-desk,
+.ads-img, .footer-devider {
+  display: none;
+}
+
+/* APP COMPONENT */
 .App {
-  text-align: center;
+  background-color: var(--app-baground-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* MENU COMPONENT */
+.menu {
+  box-shadow: 0px 10px 10px -15px #111;
+  width: 100%;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-search-menu {
+  position: absolute;
+  right: 10%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.menu-search-icon-mob {
+  padding-top: 5px;
+}
+
+/* SEARCH COMPONENT */
+.menu-path {
+  padding: 16px;
+}
+
+.menu-link {
+  color: var(--footer-color);
+  text-decoration: none;
+}
+
+.search-block {
+  background-color: var(--promo-banner-color);
+  padding: 16px;
+  border-radius: 16px;
+}
+
+.colored-heading {
+  color: var(--colored-heding-color);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.search-form {
+  position: relative;
+}
+
+.input-blog-page {
+  border-radius: 16px!important;
+  height: 40px;
+  color: var(--footer-color);
+}
+
+.btn-search {
+  right: 2%;
+  padding: 8px;
+  position: absolute;
+}
+
+.search-icon {
+  height: 24px;
+}
+
+/* ARTICLES COMPONENT */
+.article-img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.article-date-body {
+  color: var(--date-color);
+}
+
+.article-title {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700!important;
+}
+
+.article-description {
+  color: var(--text-color);
+  font-size: 16px;
+}
+
+hr {
+  color: var(--devider-color);
+}
+
+.marker-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: var(--footer-color);
+}
+
+/* ADVERTISEMENT COMPONENT */
+.ads-logo {
+  padding: 16px 0px;
+}
+
+.ads-text {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 8px 0px 16px;
+}
+
+.ads-btn {
+  color: #faf6f6;
+  background-color: var(--colored-heding-color);
+  padding: 8px 32px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  font-weight: 500!important;
+}
+
+/* FOOTER COMPONENT */
+.footer {
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  font-size: 16px;
+  color: var(--footer-color);
 }
 
-.App-link {
-  color: #61dafb;
+p {
+  margin-bottom: 8px!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer-text-bottom {
+  margin: 24px 0px 16px 0px;
 }
+
+/* DESKTOP */
+@media (min-width: 800px) { 
+
+  .search-subtitle-mob, .navbar-brand, .menu-search-icon-mob, .input, .menu-form {
+    display: none!important;
+  }
+
+  .search-img-desk, .temperature-desk, .menu-account-icon-desk, 
+  .ads-img, .footer-devider {
+    display: block;
+  }
+
+  /* MENU COMPONENT */
+  .nav-link {
+    color: #262626!important;
+    font-weight: 500;
+  }
+
+  .btn-search-menu:hover {
+    background-color: transparent!important;
+  }
+
+  .menu-form {
+    justify-content: space-evenly;
+  }
+
+  .menu-account-icon-desk {
+    width: 24px;
+    margin: 8px 24px;
+  }
+
+  .btn-search-menu {
+    right: 0%;
+  }
+
+  .menu-desk {
+    flex-direction: row-reverse;
+  }
+
+  /* SEARCH COMPONENT */
+  .search-block {
+    display: flex;
+    justify-content: space-between!important;
+    background-color: var(--app-baground-color);
+  }
+
+  .search-contanier {
+    flex-direction: column;
+    padding-top: 5%;
+  }
+
+  .colored-heading {
+    font-size: 32px;
+  }
+
+  .input-blog-page {
+    height: 56px;
+  }
+
+  .btn-search {
+    padding: 16px;
+  }
+
+  .search-img-desk {
+    width: fit-content;
+  }
+
+  /* NEWARTICLE COMPONENT */
+  .new-article-box-desk {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 56px;
+  }
+
+  .new-article-img {
+    width: 50%;
+    padding-right: 32px;
+  }
+
+  .new-article-title {
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+  }
+
+  .article-description {
+    padding: 16px 0px 52px;
+    font-size: 24px;
+  }
+
+  /* TOPOFDAY COMPONENT */
+  .top-of-day {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .article-body {
+    justify-content: space-between;
+  }
+
+  .article-body {
+    padding: 0 32px;
+    width: 100%;
+  }
+
+  .top-of-day-description {
+    font-size: 16px;
+  }
+
+  /* WEATHER COMPONENT */
+  .temperature-desk {
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  /* ADVERTISEMENT COMPONENT */
+  .ads {
+    background: linear-gradient(#CFEDE6  7.49%,
+    rgba(140, 222, 203, 0.8327)  100%);
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 56px;
+  }
+
+  .ads-box {
+    display: flex;
+    position: relative;
+    padding: 24px;
+  }
+
+  .ads-logo {
+    width: 107px;
+  }
+
+  .ads-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .ads-btn {
+    width: fit-content;
+  }
+
+  /* FOOTER */
+  .footer-text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-text-top, .footer-text-bottom {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+  }
+
+  .footer-text-bottom {
+    margin: 0px;
+  }
+ }
